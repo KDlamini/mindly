@@ -1,9 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
-  def index
-  end
+  def index; end
 
   # GET /users/1
-  def show
-  end
+  def show; end
 end
