@@ -12,6 +12,10 @@ RSpec.describe 'users controller', type: :request do
       it 'should render the correct template' do
         expect(response).to render_template(:index)
       end
+
+      it 'should display the correct placeholder text' do
+        expect(response.body).to include("Mindly Users")
+      end
     end
 
     describe 'GET /users/:id' do
@@ -23,6 +27,10 @@ RSpec.describe 'users controller', type: :request do
 
       it 'should render the correct template' do
         expect(response).to render_template(:show)
+      end
+
+      it 'should display the correct placeholder text' do
+        expect(response.body).to include("Mindly User")
       end
     end
   end
