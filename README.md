@@ -45,7 +45,7 @@ To view on browser:
 http://localhost:3000
 ```
 
-## Database creation
+## `Database creation`
 
 Create a Postgres user:
 ```
@@ -74,11 +74,6 @@ $ bin/rails db:setup
 
 ## `Tests`
 
-### To run rails tests:
-```
-$ bin/rails test
-```
-
 ### Running specs:
 Default: Run all spec files (i.e., those matching spec/**/*_spec.rb):
 ```
@@ -103,6 +98,12 @@ See all options for running specs:
 $ bundle exec rspec --help
 ```
 
+### rails tests:
+
+```
+$ bin/rails test
+```
+
 ### To track linter errors locally follow these steps:
 
 Track Ruby linter errors run:
@@ -114,7 +115,7 @@ To auto-correct correctable Rubocop offenses run:
 $ rubocop --auto-correct-all | rubocop -A
 ```
 
-## Authors
+## `Authors`
 
 👤 **Simo Nkosi**
 
