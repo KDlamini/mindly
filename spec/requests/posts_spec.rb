@@ -12,6 +12,10 @@ RSpec.describe 'posts controller', type: :request do
       it 'should render the correct template' do
         expect(response).to render_template(:index)
       end
+
+      it 'should render the correct template' do
+        expect(response.body).to include("User posts")
+      end
     end
 
     describe 'GET /users/:user_id/posts/:id' do
@@ -23,6 +27,10 @@ RSpec.describe 'posts controller', type: :request do
 
       it 'should render the correct template' do
         expect(response).to render_template(:show)
+      end
+
+      it 'should render the correct template' do
+        expect(response.body).to include("User post")
       end
     end
   end
