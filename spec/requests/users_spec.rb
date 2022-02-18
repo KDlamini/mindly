@@ -14,7 +14,7 @@ RSpec.describe 'users controller', type: :request do
       end
 
       it 'should display the correct placeholder text' do
-        expect(response.body).to include('Mindly Users')
+        expect(response.body).to include('Users')
       end
     end
 
@@ -30,7 +30,7 @@ RSpec.describe 'users controller', type: :request do
       end
 
       it 'should display the correct placeholder text' do
-        expect(response.body).to include('Mindly User')
+        expect(response.body).to include('Show user')
       end
     end
   end
