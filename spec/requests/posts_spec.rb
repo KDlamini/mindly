@@ -14,7 +14,7 @@ RSpec.describe 'posts controller', type: :request do
       end
 
       it 'should display the correct placeholder text' do
-        expect(response.body).to include('User posts')
+        expect(response.body).to include('Posts')
       end
     end
 
@@ -30,7 +30,7 @@ RSpec.describe 'posts controller', type: :request do
       end
 
       it 'should display the correct placeholder text' do
-        expect(response.body).to include('User post')
+        expect(response.body).to include('Show Post')
       end
     end
   end
