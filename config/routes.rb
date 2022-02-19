@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'users#index'
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+    resources :posts, only: [:index, :show, :new] do
+      resources :likes, only: [:new]
+      resources :comments, only: [:new]
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
