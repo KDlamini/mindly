@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
   # POST /likes
-  def create
-  end
+  def create; end
 end
