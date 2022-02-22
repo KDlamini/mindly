@@ -1,7 +1,7 @@
 <div class="grid-x grid-margin-x">
     <%= image_tag(user.photo, :alt => "rss feed", :class => "thumbnail cell medium-6 large-2") %>
-    <div class="callout cell medium-6 large-10">
+    <div class="callout cell medium-6 large-10 flex-container flex-dir-column align-spaced">
         <h3><%= link_to user.name, user_path(user) %></h3>
-        <p class="menu simple align-right">Number of posts: <%= user.posts_counter %></p>
+        <p class="menu simple align-right">Number of posts: <%= user.posts_counter || 0 %></p>
     </div>
 </div>
