@@ -12,8 +12,13 @@
   </head>
 
   <body>
-
-    <%= yield %>
+    <%= render "layouts/navigation" %>
+  
+    <section class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <%= yield %>
+      </div>
+    </section>
 
     <script>
       $(document).foundation()
