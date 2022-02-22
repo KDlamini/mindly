@@ -62,14 +62,14 @@ Then create a user (or a “role”, as Postgres calls it):
 CREATE ROLE mindly WITH CREATEDB LOGIN PASSWORD 'mindly';
 ```
 
-Migrate the database:
-```
-$ bin/rails db:create
-```
-
 Initialize the database:
 ```
 $ bin/rails db:setup
+```
+
+Migrate the database:
+```
+$ bin/rails db:create
 ```
 
 ## `Tests`
