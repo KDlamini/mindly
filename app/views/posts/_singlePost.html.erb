@@ -12,5 +12,5 @@
         </ul>
     </div>
     <p><%= post.text %></p>
-    <%= render partial: "comments/comment", locals: { comments: post.most_recent_comments } %>
+    <%= render partial: "comments/comment", locals: { comments: post.comments } %>
 </div>

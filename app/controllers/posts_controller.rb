@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
-    @comments = Comment.new
   end
 
   # GET /users/1/posts/1
