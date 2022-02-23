@@ -1,0 +1,16 @@
+<div class="callout">
+    <div class="flex-container align-justify">
+        <div>
+            <h4><%= post.title %></h4>
+            <p>by <%= post.author_id %></p>
+        </div>
+        <ul class="menu simple align-right">
+            <li>
+                <a href="#">Comments: <%= post.comments_counter || 0 %></a>
+            </li>
+            <li>Likes: <%= post.likes_counter || 0 %></li>
+        </ul>
+    </div>
+    <p><%= post.text %></p>
+    <%= render partial: "comments/comment", locals: { comments: post.most_recent_comments } %>
+</div>
