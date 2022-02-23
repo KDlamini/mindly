@@ -19,30 +19,30 @@
 @import "foundation_and_overrides";
 
 .menu-text {
-   font-family: 'Righteous', cursive;
+  font-family: 'Righteous', cursive;
 }
 
 .blog-post {
-   width: 100%;
-   margin-top: $global-margin;
+  width: 100%;
+  margin-top: $global-margin;
 }
 
 .button-group {
-   background: none;
+  background: none;
 }
 
 .button-group:hover {
-   background: none;
+  background: none;
 }
 
 .comment {
-   font-family: $font-family-monospace;
+  font-family: $font-family-monospace;
 }
 
 .banner {
-   border: none;
-   border-bottom: $hr-border;
-   border-radius: 0;
-   width: 100%;
-   padding: 0;
+  border: none;
+  border-bottom: $hr-border;
+  border-radius: 0;
+  width: 100%;
+  padding: 0;
 }
