@@ -1,1 +1,12 @@
-<h1>Show user</h1>
+<div class="blog-post">
+    <%= render partial: "user",  locals: { user:  @user } %>
+    <%= render partial: "bio", locals: { user: @user } %>
+
+    <% @user.most_recent_posts.each do |post| %>
+        <%= render partial: "posts/post", locals:{ post: post } %>
+    <% end %>
+</div>
+
+<div class="primary button-group align-center">
+    <%= link_to 'See all Posts', user_posts_path(@user), class: "button" %>
+</div>
