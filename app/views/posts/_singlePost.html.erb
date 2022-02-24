@@ -12,5 +12,19 @@
         </ul>
     </div>
     <p><%= post.text %></p>
+    <ul class="menu simple align-right">
+        <li>
+            <%= link_to new_user_post_comment_path(@post.author_id, @post) do %>
+                <i class="plus icon" ></i>
+                <span>Comment</span>
+            <% end %>
+        </li>
+        <li>
+            <%= link_to user_post_likes_path(@post.author_id, @post) do %>
+                <i class="heart outline icon"></i>
+                <span>Like</span>
+            <% end %>
+        </li>
+    </ul>
     <%= render partial: "comments/comment", locals: { comments: post.comments } %>
 </div>
