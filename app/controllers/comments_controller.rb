@@ -16,7 +16,9 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to user_post_path(@comment.author_id, @comment.post_id), notice: "Comment was successfully created." }
+        format.html do
+          redirect_to user_post_path(@comment.author_id, @comment.post_id), notice: 'Comment was successfully created.'
+        end
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -30,12 +32,13 @@ class CommentsController < ApplicationController
   def destroy; end
 
   private
-    def set_comment
-      @comment.post_id = params[:post_id]
-      @comment.author_id = params[:user_id]
-    end
 
-    def comment_params
-      params.require(:comment).permit(:text, :post_id)
-    end
+  def set_comment
+    @comment.post_id = params[:post_id]
+    @comment.author_id = params[:user_id]
+  end
+
+  def comment_params
+    params.require(:comment).permit(:text, :post_id)
+  end
 end
