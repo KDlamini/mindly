@@ -1,6 +1,7 @@
 <div class="callout large banner">
   <div class="grid-x grid-padding-x">
-    <div class="cell small-12 banner-items">
+    <% render 'layouts/alerts' if notice %>
+    <div class="cell small-12">
       <%= link_to "< Back", user_path(@user) %>
     </div>
   </div>
@@ -15,3 +16,5 @@
 </div>
 
 <%= render partial: "pagination" %>
+
+
