@@ -1,0 +1,19 @@
+
+<div class="comments">
+  <hr>
+  <% if comments.any? %>
+    <% comments.includes(:author).each do |comment| %>
+      <div class="flex-container">
+        <p>
+          <b><%= comment.author.name %></b>
+        </p>
+        <p>&nbsp; : &nbsp;</p>
+        <p class="comment">
+          <%= comment.text %>
+        </p>
+      </div>
+    <% end %>
+  <% else %>
+    <p class="comment">No Comment.</p>
+  <% end %>
+</div>

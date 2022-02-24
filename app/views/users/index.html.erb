@@ -1,2 +1,11 @@
-<h1>Users</h1>
+<div class="callout large banner">
+  <div class="grid-x grid-padding-x">
+    <div class="cell small-12 banner-items text-center">Welcome to Mindly blogs!</div>
+  </div>
+</div>
 
+<% @users.each do |user| %>
+    <div class="blog-post">
+        <%= render partial: "user",  locals: { user: user } %>
+    </div>
+<% end %>
