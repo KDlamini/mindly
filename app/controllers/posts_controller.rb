@@ -31,15 +31,8 @@ class PostsController < ApplicationController
   end
 
   private
-  def set_post
-    @post = Post.find(params[:id])
-  end
 
   def post_params
     params.require(:post).permit(:title, :text, :likes_counter, :comments_counter)
-  end
-
-  def reference_params
-    @post.author_id = params[:user_id]
   end
 end
