@@ -3,9 +3,10 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   before(:each) do
     @user = User.new(name: 'Senzo', bio: 'I am a web developer', photo: '', posts_counter: 0)
-    @post = Post.new(title: 'How to learn coding', text: 'Practice by doing projects', comments_counter: 0, likes_counter: 0, author_id: @user.id)
+    @post = Post.new(title: 'How to learn coding', text: 'Practice by doing projects', comments_counter: 0,
+                     likes_counter: 0, author_id: @user.id)
 
-    5.times { |i| Comment.new(text: "Comment #{i}", author_id: @user.id, post_id: @post.id) }
+    6.times { |i| Comment.new(text: "Comment #{i}", author_id: @user.id, post_id: @post.id) }
 
     @comments = Comment.where(post_id: @post.id).where(author_id: @user.id).all
   end
