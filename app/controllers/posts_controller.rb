@@ -20,6 +20,8 @@ class PostsController < ApplicationController
   def create
     @current_user = User.find(params[:user_id])
     @post = @current_user.posts.new(post_params)
+    @post.comments_counter = 0
+    @post.likes_counter = 0
 
     respond_to do |format|
       if @post.save
