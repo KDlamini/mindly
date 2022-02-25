@@ -1,6 +1,7 @@
 <div class="callout large banner">
   <div class="grid-x grid-padding-x">
-    <div class="cell small-12 banner-items">
+    <%= render 'layouts/alerts' if notice %>
+    <div class="cell small-12">
       <%= link_to "< Back", user_path(@user) %>
     </div>
   </div>
@@ -9,9 +10,11 @@
 <div class="blog-post">
   <%= render partial: "users/user", locals: { user: @user } %>
 
-  <% @posts.each do |post| %>
+  <% @posts.reverse_each do |post| %>
     <%= render partial: "post", locals:{ post: post } %>
   <% end %>
 </div>
 
 <%= render partial: "pagination" %>
+
+
