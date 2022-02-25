@@ -54,6 +54,9 @@ gem 'sass-rails'
 gem 'autoprefixer-rails'
 gem 'foundation-rails'
 
+gem 'foundation-will_paginate'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
 group :development, :test do
   gem 'rspec-rails'
 
