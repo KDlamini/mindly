@@ -51,6 +51,8 @@ gem 'sass-rails'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'devise'
+
 gem 'autoprefixer-rails'
 gem 'foundation-rails'
 
