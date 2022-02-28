@@ -24,6 +24,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <%= f.hidden_field :posts_counter, value: 0 %>
+
   <div class="actions medium-12 cell text-center">
     <%= f.submit "Sign up", class: 'button' %>
   </div>
