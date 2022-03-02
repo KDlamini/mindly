@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'users#index'
+  root 'home#index'
   resources :users, only: %i[index show] do
     resources :posts, only: %i[index show new create destroy] do
       resources :likes, only: [:create]
