@@ -1,6 +1,8 @@
-<div class="grid-x grid-padding-x">
-  <%= render 'layouts/alerts' if notice %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="callout login large banner">
+  <div class="grid-x grid-padding-x">
+    <%= render 'layouts/alerts' if notice  %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+  </div>
 </div>
 
 <div class="blog-post">
