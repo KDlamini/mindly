@@ -11,6 +11,15 @@
         <p class="comment">
           <%= comment.text %>
         </p>
+        <ul class="menu simple add align-right">
+          <li>
+              <% if can? :destroy, comment%>
+                  <%= button_to "/users/#{comment.author_id}/posts/#{comment.post_id}/comments/#{comment.id}", method: :delete do %>
+                      <i class="trash alternate outline icon"></i>
+                  <% end %>
+              <% end %>
+          </li>
+        </ul>
       </div>
     <% end %>
   <% else %>

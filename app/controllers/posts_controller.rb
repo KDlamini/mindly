@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
-  load_and_authorize_resource
+  load_and_authorize_resource :posts
 
   # GET /users/posts
   def index
