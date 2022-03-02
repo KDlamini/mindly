@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: %i[index show]
+  load_and_authorize_resource
+
   # GET /users/posts
   def index
     @user = User.find(params[:user_id])
