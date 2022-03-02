@@ -30,10 +30,10 @@ form {
 
 .button-group {
   background: none;
-}
 
-.button-group:hover {
-  background: none;
+  &:hover {
+    background: none;
+  }
 }
 
 .comment {
@@ -52,6 +52,11 @@ form {
   width: 100%;
 }
 
+.callout.login {
+  border: none;
+  padding: 0.5rem 0;
+}
+
 .callout.success {
   color: $dark-gray;
 }
@@ -63,5 +68,13 @@ form {
     button {
       color: $primary-color;
     }
+  }
+}
+
+.trash.icon {
+  cursor: pointer;
+
+  &:hover {
+    color: $alert-color;
   }
 }
