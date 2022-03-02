@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   after_save :update_posts_counter
+  after_destroy :delete_posts_counter
   has_many :comments
   has_many :likes
   belongs_to :author, class_name: 'User'
@@ -10,6 +11,10 @@ class Post < ApplicationRecord
 
   def update_posts_counter
     author.increment!(:posts_counter)
+  end
+
+  def delete_posts_counter
+    author.decrement!(:posts_counter)
   end
 
   def most_recent_comments

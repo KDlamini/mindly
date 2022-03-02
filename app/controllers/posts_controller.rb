@@ -36,6 +36,15 @@ class PostsController < ApplicationController
     end
   end
 
+    # DELETE /posts/1 
+    def destroy
+      @post.destroy
+  
+      respond_to do |format|
+        format.html { redirect_to user_posts_path, notice: "Post was successfully removed." }
+      end
+    end
+
   private
 
   def post_params
