@@ -46,6 +46,7 @@ form {
   border-radius: 0;
   width: 100%;
   padding: 3rem 0;
+  background: transparent;
 }
 
 .callout.post {
@@ -77,4 +78,17 @@ form {
   &:hover {
     color: $alert-color;
   }
+}
+
+.welcome::before {
+  content: '';
+  background: url('https://i.pcmag.com/imagery/articles/05LXP8WPMNAES8LK4rf9IZQ-13..v1633113383.jpg');
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 98vh;
+  position: absolute;
+  z-index: -1;
 }
