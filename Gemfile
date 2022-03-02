@@ -59,6 +59,8 @@ gem 'foundation-rails'
 gem 'foundation-will_paginate'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
+gem 'cancancan', '~> 1.9'
+
 group :development, :test do
   gem 'rspec-rails'
 
