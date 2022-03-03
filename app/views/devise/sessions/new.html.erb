@@ -1,6 +1,9 @@
 <div class="callout login large banner">
   <div class="grid-x grid-padding-x">
     <%= render 'layouts/alerts' if notice  %>
+    <% if alert %>
+      <div class="callout success cell small-12 text-center"><%= alert %></div>
+    <% end %>
     <%= render "devise/shared/error_messages", resource: resource %>
   </div>
 </div>
