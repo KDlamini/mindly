@@ -19,10 +19,10 @@ RSpec.describe 'users controller', type: :request do
     end
 
     describe 'GET /users/:id' do
-      before(:example) {
+      before(:example) do
         @user = User.create! name: 'Zweli', password: 'password', email: 'zweli@gmail.com', posts_counter: 0
-        get user_path(@user) 
-      }
+        get user_path(@user)
+      end
 
       it 'should return 200 http_status_code' do
         expect(response).to have_http_status(:ok)
