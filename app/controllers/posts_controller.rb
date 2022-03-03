@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: %i[index show]
+  load_and_authorize_resource :user, :posts, :comments, :likes
+
   # GET /users/posts
   def index
     @user = User.find(params[:user_id])
@@ -30,6 +33,15 @@ class PostsController < ApplicationController
       else
         format.html { render :new, status: :unprocessable_entity }
       end
+    end
+  end
+
+  # DELETE /posts/1
+  def destroy
+    @post.destroy
+
+    respond_to do |format|
+      format.html { redirect_to user_posts_path, notice: 'Post was successfully removed.' }
     end
   end
 

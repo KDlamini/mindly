@@ -2,11 +2,7 @@
     <div class="grid-x grid-padding-x">
         <%= link_to "< Back", users_path, class: "cell small-4" %>
         <div class="cell small-4"></div>
-        <div class="cell small-4 text-right">
-            <%= link_to new_user_post_path(@user) do %>
-                <i class="plus icon" ></i>
-                <span>New Post</span>
-            <% end %>
+        <%= link_to 'See all Posts >', user_posts_path(@user), class: "cell small-4 text-right" %>
         </div>
     </div>
 </div>

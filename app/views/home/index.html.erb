@@ -1,0 +1,31 @@
+<section class="grid-x welcome">
+    <div class="callout large banner">
+    <div class="grid-x grid-padding-x">
+        <%= render 'layouts/alerts' if notice %>
+        <% if alert %>
+            <div class="callout success cell small-12 text-center"><%= alert %></div>
+        <% end %>
+        <h5 class="cell small-12 banner-items text-center">Welcome to Mindly blogs!</h5>
+    </div>
+    </div>
+
+    <div class="blog-post">
+        <div class="callout large">
+            <p class="text-center">Read everything under the sun. Amazing content delivered to you with funny experiences that never fail to excite.</p>
+            <h6 class="text-center">Reaching audience one step at a time.</h6>
+            <nav class="orbit-bullets">
+                <button class="is-active" data-slide="0">
+                    <span class="show-for-sr">First slide details.</span>
+                    <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+                </button>
+                <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+            </nav>
+
+            <div class="actions medium-12 cell text-center">
+                <%= link_to "View Posts", users_path, class: 'button warning' %>
+            </div>
+        </div>
+    </div>
+</section>
