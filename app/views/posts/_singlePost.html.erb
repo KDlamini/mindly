@@ -2,9 +2,7 @@
     <ul class="menu simple add align-right">
         <li>
             <% if can? :destroy, post %>
-                <%= button_to "/users/#{@post.author_id}/posts/#{@post.id}", method: :delete do %>
-                    <i class="trash alternate outline icon"></i>
-                <% end %>
+                <%= button_to "delete", "/users/#{@post.author_id}/posts/#{@post.id}", method: :delete, class: "hollow button alert"%>
             <% end %>
         </li>
     </ul>

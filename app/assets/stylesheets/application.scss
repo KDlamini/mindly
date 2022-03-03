@@ -40,6 +40,11 @@ form {
   font-family: $font-family-monospace;
 }
 
+.comment-group p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
 .callout.banner {
   border: none;
   border-bottom: $hr-border;
@@ -74,9 +79,10 @@ form {
 
 .trash.icon {
   cursor: pointer;
+  color: $alert-color;
 
   &:hover {
-    color: $alert-color;
+    color: $secondary-color;
   }
 }
 
