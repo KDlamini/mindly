@@ -3,8 +3,10 @@ require 'rails_helper'
 RSpec.describe 'User index', type: :feature do
   describe 'User' do
     before(:each) do
-      @user1 = User.create! name: 'Zweli', password: 'password', email: 'zweli@gmail.com', posts_counter: 0, confirmed_at: Time.now
-      @user2 = User.create! name: 'Lucky', password: 'password', email: 'lucky@gmail.com', posts_counter: 0, confirmed_at: Time.now
+      @user1 = User.create! name: 'Zweli', password: 'password', email: 'zweli@gmail.com', posts_counter: 0,
+                            confirmed_at: Time.now
+      @user2 = User.create! name: 'Lucky', password: 'password', email: 'lucky@gmail.com', posts_counter: 0,
+                            confirmed_at: Time.now
       visit new_user_session_path
       sleep(1)
       fill_in 'Email', with: 'zweli@gmail.com'
