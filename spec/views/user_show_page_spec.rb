@@ -5,10 +5,13 @@ RSpec.describe 'User show', type: :feature do
     before(:each) do
       @user1 = User.create! name: 'Jacob', password: 'password', bio: 'Teacher from Poland',
                             email: 'jacob@gmail.com', posts_counter: 0, confirmed_at: Time.now
-      visit "http://localhost:3000/users/sign_in"
+      visit new_user_session_path
+      sleep(1)
       fill_in 'Email', with: 'jacob@gmail.com'
       fill_in 'Password', with: 'password'
+      sleep(1)
       click_button 'Log in'
+      sleep(1)
 
       @post1 = @user1.posts.create!(title: 'JavaScript',
                                     text: 'Learn JavaScript from scratch', comments_counter: 0, likes_counter: 0)

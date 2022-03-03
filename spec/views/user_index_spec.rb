@@ -5,10 +5,13 @@ RSpec.describe 'User index', type: :feature do
     before(:each) do
       @user1 = User.create! name: 'Zweli', password: 'password', email: 'zweli@gmail.com', posts_counter: 0, confirmed_at: Time.now
       @user2 = User.create! name: 'Lucky', password: 'password', email: 'lucky@gmail.com', posts_counter: 0, confirmed_at: Time.now
-      visit "http://localhost:3000/users/sign_in"
+      visit new_user_session_path
+      sleep(1)
       fill_in 'Email', with: 'zweli@gmail.com'
       fill_in 'Password', with: 'password'
+      sleep(1)
       click_button 'Log in'
+      sleep(1)
       visit users_path
     end
 
