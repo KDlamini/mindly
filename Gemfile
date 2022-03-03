@@ -62,6 +62,7 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'cancancan', '~> 1.9'
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'rspec-rails'
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
