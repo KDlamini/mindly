@@ -4,7 +4,7 @@
     <div class="cell small-4">
       <%= link_to "< Back", user_path(@user) %>
     </div>
-    <div class="cell small-4"></div>
+    <h5 class="cell small-4 text-center">Blog Posts</h5>
     <div class="cell small-4 text-right">
     <% if can? :create, @user %>
       <%= link_to new_user_post_path(@user) do %>

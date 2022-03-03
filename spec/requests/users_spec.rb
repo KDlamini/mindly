@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'users controller', type: :request do
   describe 'GET user routes' do
     describe 'GET /users' do
-      before(:example) { get '/users' }
+      before(:example) { get users_path }
 
       it 'should return 200 http_status_code' do
         expect(response).to have_http_status(:ok)
@@ -14,12 +14,15 @@ RSpec.describe 'users controller', type: :request do
       end
 
       it 'should display the correct placeholder text' do
-        expect(response.body).to include('Users')
+        expect(response.body).to include('Mindly blogs')
       end
     end
 
     describe 'GET /users/:id' do
-      before(:example) { get '/users/1' }
+      before(:example) do
+        @user = User.create! name: 'Zweli', password: 'password', email: 'zweli@gmail.com', posts_counter: 0
+        get user_path(@user)
+      end
 
       it 'should return 200 http_status_code' do
         expect(response).to have_http_status(:ok)
@@ -30,7 +33,7 @@ RSpec.describe 'users controller', type: :request do
       end
 
       it 'should display the correct placeholder text' do
-        expect(response.body).to include('Show user')
+        expect(response.body).to include('Zweli')
       end
     end
   end
