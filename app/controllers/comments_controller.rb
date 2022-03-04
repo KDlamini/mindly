@@ -12,8 +12,7 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
-    @current_user = User.find(params[:user_id])
-    @comment = @current_user.comments.new(comment_params)
+    @comment = current_user.comments.new(comment_params)
     set_comment
 
     respond_to do |format|
@@ -45,7 +44,7 @@ class CommentsController < ApplicationController
 
   def set_comment
     @comment.post_id = params[:post_id]
-    @comment.author_id = params[:user_id]
+    @comment.author_id = current_user.id
   end
 
   def comment_params
