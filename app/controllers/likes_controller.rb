@@ -4,7 +4,7 @@ class LikesController < ApplicationController
   # POST /likes
   def create
     set_like
-    @like = @current_user.likes.new(author_id: params[:user_id], post_id: params[:post_id])
+    @like = current_user.likes.new(author_id: current_user.id, post_id: params[:post_id])
 
     respond_to do |format|
       if @like.save
@@ -19,6 +19,5 @@ class LikesController < ApplicationController
 
   def set_like
     @like = Like.new
-    @current_user = User.find(params[:user_id])
   end
 end

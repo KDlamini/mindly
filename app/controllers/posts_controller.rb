@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
-  load_and_authorize_resource :user, :posts, :comments, :likes
+  # load_and_authorize_resource
 
   # GET /users/posts
   def index
@@ -20,10 +20,9 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  # POST /posts or /posts.json
+  # POST /posts
   def create
-    @current_user = User.find(params[:user_id])
-    @post = @current_user.posts.new(post_params)
+    @post = current_user.posts.new(post_params)
     @post.comments_counter = 0
     @post.likes_counter = 0
 
@@ -48,6 +47,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :text, :likes_counter, :comments_counter)
+    params.require(:post).permit(:title, :text)
   end
 end
