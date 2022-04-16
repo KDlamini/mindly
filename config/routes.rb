@@ -7,8 +7,13 @@ Rails.application.routes.draw do
       resources :comments, only: %i[new create destroy]
     end
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+ 
+  # Defines API routes
+  namespace :api , defaults: { format: :json } do
+    namespace :v1 do
+      devise_for :users, :skip => [:registrations, :passwords, :confirmations ]
+      resources :posts, only: %i[index]
+      resources :comments, only: %i[index create]
+    end
+  end
 end
