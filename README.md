@@ -6,6 +6,9 @@ The Mindly app will be a classic example of a blog website. This will be a fully
 
 - Ruby on Rails
 
+## Live Preview
+[Demo](https://mindly-blogs.herokuapp.com/)
+
 ## Additional Tools
 
 - rubocop
