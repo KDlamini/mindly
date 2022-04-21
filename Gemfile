@@ -53,6 +53,8 @@ gem 'sass-rails'
 
 gem 'devise'
 
+gem 'dotenv-rails'
+
 gem 'autoprefixer-rails'
 gem 'foundation-rails'
 
